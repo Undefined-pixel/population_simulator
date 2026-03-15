@@ -1,0 +1,31 @@
+[build-system]
+requires      = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name        = "population-simulator"
+version     = "1.0.0"
+description = "Animierter Populationswachstum-Simulator mit GUI"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "matplotlib>=3.7",
+]
+
+[project.scripts]
+population-simulator = "population_simulator.main:run"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths    = ["tests"]
+pythonpath   = ["src"]
+addopts      = "-v"
+
+[tool.pyinstaller]
+# Wird von scripts/build_exe.sh verwendet
+name     = "population_simulator"
+onefile  = true
+windowed = true

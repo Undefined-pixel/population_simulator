@@ -1,0 +1,2 @@
+[console_scripts]
+population-simulator = population_simulator.main:run
