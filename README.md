@@ -2,6 +2,12 @@
 
 Animierter Simulator fuer Populationswachstum mit grafischer Benutzeroberflaeche.
 
+---
+
+## Certificate
+
+![pop_sim_pic](pop_sim.png)
+
 ## Modelle
 
 | Modell | Gleichung (kontinuierlich) |
@@ -39,11 +45,14 @@ population_simulator/
 - Python 3.11 oder neuer
 - pip
 
-### Abhaengigkeiten installieren
+### Paket installieren
 
 ```bash
-pip install -r requirements.txt
+pip install -e .
 ```
+
+Dieser Befehl installiert das Paket im Entwicklungsmodus und richtet alle
+Abhaengigkeiten (numpy, scipy, matplotlib) automatisch ein.
 
 ### Starten
 
@@ -51,10 +60,10 @@ pip install -r requirements.txt
 python -m population_simulator
 ```
 
-oder direkt:
+oder ueber den installierten Einstiegspunkt:
 
 ```bash
-python src/population_simulator/main.py
+population-simulator
 ```
 
 ## Tests ausfuehren

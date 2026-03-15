@@ -1,6 +1,7 @@
 README.md
 pyproject.toml
 src/population_simulator/__init__.py
+src/population_simulator/__main__.py
 src/population_simulator/config.py
 src/population_simulator/gui.py
 src/population_simulator/main.py
